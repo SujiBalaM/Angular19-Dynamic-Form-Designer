@@ -1,0 +1,9 @@
+<div class="p-4 bg-white rounded-lg h-[calc(100vh-150px)] overflow-y-auto border border-gray-200 shadow-sm flex flex-col gap-4">
+<h3 class="text-xl">
+    Form Elelments
+</h3>
+    @for (type of fields; track type.type) {
+    <app-field-button [fieldType]="type"/>
+
+}    
+</div>
