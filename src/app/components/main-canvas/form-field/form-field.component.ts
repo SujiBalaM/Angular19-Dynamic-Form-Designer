@@ -11,12 +11,8 @@ import { FormService } from 'src/app/services/form.service';
 })
 export class FormFieldComponent {
 field = input.required<FormField>();
-fieldTypeService = inject(FieldTypesService);
 formService = inject(FormService);
-previewComponent = computed(() => {
-  const type = this.fieldTypeService.getFieldType(this.field().type);
-  return type?.component ?? null;
-})
+
 onDelete(event:Event){
 event.stopPropagation();
 this.formService.onDelete(this.field().id)

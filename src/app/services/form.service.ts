@@ -39,4 +39,12 @@ export class FormService {
     }));
     this._rows.set(newRows)
   }
+  addRow() {
+    const newRows:FormRow = {
+      id:crypto.randomUUID(),
+      fields:[],
+    }
+    const rows = this._rows();
+    this._rows.set([...rows,newRows])
+  }
 }

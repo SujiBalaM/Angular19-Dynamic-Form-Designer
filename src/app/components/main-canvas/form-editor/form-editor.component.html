@@ -4,7 +4,7 @@
         cdkDropList
         (cdkDropListDropped)="onDrop($event,row.id)"
         [cdkDropListOrientation]="'mixed'"
-        class="p-5 bg-white border-2 border-gray-200 border-dashed rounded-lg">
+        class="p-5 mb-4 bg-white border-2 border-gray-200 border-dashed rounded-lg">
         <div>Row</div>
         <div class="flex gap-4 flex-wrap">
             @for (field of row.fields; track field.id) {

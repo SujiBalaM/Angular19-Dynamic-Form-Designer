@@ -18,6 +18,11 @@ import {MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule} from '@angular/mater
 import {MatInputModule} from '@angular/material/input'
 import {MatCheckboxModule} from '@angular/material/checkbox'
 import { NgComponentOutlet, TitleCasePipe } from '@angular/common';
+import {MatButtonToggleModule} from '@angular/material/button-toggle'
+import { FormPreviewComponent } from './components/main-canvas/form-preview/form-preview.component';
+import { FieldPreviewComponent } from './components/main-canvas/field-preview/field-preview.component';
+import { MatButtonModule } from '@angular/material/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +34,8 @@ import { NgComponentOutlet, TitleCasePipe } from '@angular/common';
     FormFieldComponent,
     TextFieldComponent,
     CheckboxFieldComponent,
+    FormPreviewComponent,
+    FieldPreviewComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,11 @@ import { NgComponentOutlet, TitleCasePipe } from '@angular/common';
     DragDropModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCheckboxModule,NgComponentOutlet,TitleCasePipe,
+    MatCheckboxModule,
+    NgComponentOutlet,
+    TitleCasePipe,
+    MatButtonToggleModule,
+    MatButtonModule
 
   ],
   providers: [
