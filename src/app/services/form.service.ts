@@ -47,4 +47,12 @@ export class FormService {
     const rows = this._rows();
     this._rows.set([...rows,newRows])
   }
+  deleteRow(rowId:string){
+    if(this._rows().length == 1){
+      return;
+    }
+    const rows = this._rows();
+    const newRows = rows.filter(row => row.id !== rowId);
+    this._rows.set(newRows)
+  }
 }
