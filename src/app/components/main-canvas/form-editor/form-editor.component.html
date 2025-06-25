@@ -2,6 +2,7 @@
     @for (row of formService.rows(); track row.id) {
         <div 
         cdkDropList
+        [cdkDropListData]="row.id"
         (cdkDropListDropped)="onDrop($event,row.id)"
         [cdkDropListOrientation]="'mixed'"
         class="p-5 mb-4 bg-white border-2 border-gray-200 border-dashed rounded-lg">
@@ -12,7 +13,8 @@
         </div>
         <div class="flex gap-4 flex-wrap">
             @for (field of row.fields; track field.id) {
-                <app-form-field cdkDrag cdkDragData="field" class="flex-1" [field]="field"/>
+                <app-form-field cdkDrag cdkDragData="field"
+                 class="flex-1" [field]="field"/>
             }@empty {
                 <div class="text-gray-500 w-full border-primary-container p-4 mb-4 bg-white border-2 border-gray-200 border-dashed rounded-lg text-center">
                     Drag and Drop From Elements Here

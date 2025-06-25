@@ -25,5 +25,10 @@ onDrop(event: CdkDragDrop<string>,rowId:string) {
     this.formService.addField(newField,rowId,event.currentIndex)
     return;
   }
+  const dragData = event.item.data as FormField;
+  const previousRowId = event.previousContainer.data as string;
+
+  this.formService.moveField(dragData.id,previousRowId,rowId,event.currentIndex)
+
 }
 }

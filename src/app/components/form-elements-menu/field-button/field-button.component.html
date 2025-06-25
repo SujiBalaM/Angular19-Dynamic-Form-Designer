@@ -1,10 +1,19 @@
 <button 
 cdkDrag
 [cdkDragData]="fieldType()"
+(cdkDragStarted)="whileDragging.set(true)"
+(cdkDragEnded)="whileDragging.set(false)"
 class="w-full p-3 border border-gray-200 hover:border-black hover:shadow-md transition-shadow rounded-lg flex items-center gap-4">
 <div class="rounded-md bg-gray-100 flex items-center justify-center p-1">
-    <mat-icon>{{fieldType().icon}}</mat-icon>
+    <mat-icon class="scale-75">{{fieldType().icon}}</mat-icon>
 </div>
 <span>{{fieldType().label}}</span>
 <div *cdkDragPlaceholder></div>
 </button>
+@if (whileDragging()) {
+    <div class="rounded-md bg-gray-100 flex items-center justify-center p-1">
+        <mat-icon class="scale-75">{{fieldType().icon}}</mat-icon>
+    </div>
+    <span>{{fieldType().label}}</span>
+    
+}

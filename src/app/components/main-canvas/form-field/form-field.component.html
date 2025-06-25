@@ -1,4 +1,6 @@
-<div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:border-black cursor-pointer p-4 pt-1">
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:border-black cursor-pointer p-4 pt-1" 
+[class]="formService.selectedField()?.id === field().id ? '!border-black':''"
+(click)="formService.setSelectedField(field().id)">
     <div class="flex items-center justify-between mb-1">
         <span class="text-sm">{{field().type | titlecase}}</span>
         <button mat-icon-button (click)="onDelete($event)">

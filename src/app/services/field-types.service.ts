@@ -11,6 +11,7 @@ const TEXT_FIELD_DEFINITION = {
     label:'Text Field',
     required:false
   },
+  settingsConfig:[],
   component:TextFieldComponent
 }
 const CHECKBOX_FIELD_DEFINITION = {
@@ -21,6 +22,7 @@ const CHECKBOX_FIELD_DEFINITION = {
     label:'Checkbox Field',
     required:false
   },
+  settingsConfig:[],
   component:CheckboxFieldComponent
 }
 @Injectable({

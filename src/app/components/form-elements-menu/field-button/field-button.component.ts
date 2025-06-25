@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { FieldTypeDefinition } from 'src/app/models/field';
 
 @Component({
@@ -9,4 +9,5 @@ import { FieldTypeDefinition } from 'src/app/models/field';
 })
 export class FieldButtonComponent {
 fieldType = input.required<FieldTypeDefinition>()
+whileDragging = signal(false);
 }

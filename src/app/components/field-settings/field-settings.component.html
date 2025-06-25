@@ -1,1 +1,5 @@
-<p class="p-4 bg-white rounded-lg h-[calc(100vh-150px)] overflow-y-auto border border-gray-200 shadow-sm">field setting works!</p>
+<div class="p-4 bg-white rounded-lg h-[calc(100vh-150px)] overflow-y-auto border border-gray-200 shadow-sm">
+@if (formService.selectedField(); as selectedField) {
+    {{selectedField.label}}
+}    
+</div>
